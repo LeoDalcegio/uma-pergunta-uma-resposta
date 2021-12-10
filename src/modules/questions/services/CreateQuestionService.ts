@@ -6,13 +6,25 @@ class CreateQuestionService {
   public async execute(createQuestionDto: CreateQuestionDto): Promise<Question> {
     const prisma = new PrismaClient();
 
-    const questionCreated = await prisma.question.create({
+    const createdQuestion = await prisma.question.create({
       data: {
         description: createQuestionDto.question,
       },
     });
 
-    return questionCreated;
+    await prisma.answer.create({
+      data: {
+        description: createQuestionDto.answer,
+        isCorrectAnswer: true,
+        question: {
+          connect: {
+            id: createdQuestion.id,
+          },
+        },
+      },
+    });
+
+    return createdQuestion;
   }
 }
 
