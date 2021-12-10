@@ -1,30 +1,24 @@
 import { Router } from 'express';
-import QuestionController from '../controllers/QuestionController';
 import { celebrate, Joi, Segments } from 'celebrate';
+import QuestionsController from '../controllers/QuestionsController';
 
 const questionsRouter = Router();
-const questionController = new QuestionController();
-
-questionsRouter.get(
-  '/:id',
-  celebrate({
-    [Segments.PARAMS]: {
-      id: Joi.string().uuid().required(),
-    },
-  }),
-  questionController.show,
-);
+const questionsController = new QuestionsController();
 
 questionsRouter.post(
   '/',
   celebrate({
     [Segments.BODY]: {
-      name: Joi.string().required(),
-      price: Joi.number().precision(2).required(),
-      quantity: Joi.number().precision(2).required(),
+      question: Joi.string().required(),
+      answer: Joi.string().required(),
     },
   }),
-  questionController.create,
+  questionsController.create,
+);
+
+questionsRouter.get(
+  '/random',
+  questionsController.getRandom,
 );
 
 export default questionsRouter;

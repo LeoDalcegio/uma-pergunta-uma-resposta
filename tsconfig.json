@@ -2,7 +2,12 @@
   "compilerOptions": {
     "target": "es2017",
     "module": "commonjs",
-    "lib": ["dom", "es6", "es2017", "esnext.asynciterable"],
+    "lib": [
+      "dom",
+      "es6",
+      "es2017",
+      "esnext.asynciterable"
+    ],
     "skipLibCheck": true,
     "sourceMap": true,
     "outDir": "./dist",
@@ -18,22 +23,26 @@
     "noFallthroughCasesInSwitch": true,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
     "resolveJsonModule": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
     "baseUrl": ".",
     "paths": {
       "@config/*": [
-        "/src/config/*"
+        "src/config/*"
       ],
       "@modules/*": [
-        "/src/modules/*"
+        "src/modules/*"
       ],
       "@shared/*": [
-        "/src/shared/*"
+        "src/shared/*"
       ]
     }
   },
-  "exclude": ["node_modules"],
-  "include": ["./src/**/*.ts"]  
+  "exclude": [
+    "node_modules"
+  ],
+  "include": [
+    "./src/**/*.ts"
+  ]
 }
