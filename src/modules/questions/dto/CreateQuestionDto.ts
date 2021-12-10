@@ -1,5 +1,6 @@
-export class CreateQuestionDto {
-  readonly question: string;
+import { CreateQuestionAnswerDto } from "./CreateQuestionAnswerDto";
 
-  readonly answer: string;
+export interface CreateQuestionDto {
+  question: string;
+  answer: string | CreateQuestionAnswerDto[];
 }

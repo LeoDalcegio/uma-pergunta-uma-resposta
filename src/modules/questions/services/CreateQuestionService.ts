@@ -1,30 +1,45 @@
-import { PrismaClient } from '@prisma/client';
-import { Question } from '.prisma/client';
 import { CreateQuestionDto } from '../dto/CreateQuestionDto';
+import prisma from '../../../shared/prisma/prisma-client';
 
 class CreateQuestionService {
-  public async execute(createQuestionDto: CreateQuestionDto): Promise<Question> {
-    const prisma = new PrismaClient();
+  public async execute(createQuestionDto: CreateQuestionDto) {
+    const { question, answer } = createQuestionDto;
 
     const createdQuestion = await prisma.question.create({
       data: {
-        description: createQuestionDto.question,
+        description: question,
       },
     });
 
-    await prisma.answer.create({
-      data: {
-        description: createQuestionDto.answer,
-        isCorrectAnswer: true,
-        question: {
-          connect: {
-            id: createdQuestion.id,
+    if (typeof answer === 'string' || answer instanceof String) {
+      await prisma.answer.create({
+        data: {
+          description: answer as string,
+          isCorrectAnswer: true,
+          question: {
+            connect: {
+              id: createdQuestion.id,
+            },
           },
         },
-      },
-    });
+      });
 
-    return createdQuestion;
+      return
+    }
+
+    for (const answerOption of answer) {
+      await prisma.answer.create({
+        data: {
+          description: answerOption.description,
+          isCorrectAnswer: answerOption.isCorrectAnswer,
+          question: {
+            connect: {
+              id: createdQuestion.id,
+            },
+          },
+        },
+      });
+    }
   }
 }
 
