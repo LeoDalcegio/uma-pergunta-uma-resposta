@@ -1,0 +1,1 @@
+{"version":3,"file":"GetRandomQuestionService.js","sourceRoot":"","sources":["../../../../src/modules/questions/services/GetRandomQuestionService.ts"],"names":[],"mappings":";;;;;AACA,yFAA0D;AAE1D,MAAM,wBAAwB;IACrB,KAAK,CAAC,OAAO;QAClB,MAAM,QAAQ,GAAG,MAAM,uBAAM,CAAC,SAAS,CAAU,mDAAmD,CAAC;QAErG,OAAO,QAAQ,CAAC;IAClB,CAAC;CACF;AAED,kBAAe,wBAAwB,CAAC"}

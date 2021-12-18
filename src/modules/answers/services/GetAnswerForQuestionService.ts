@@ -1,5 +1,5 @@
-import AppError from '@shared/errors/AppError';
-import prisma from '@shared/prisma/prisma-client';
+import AppError from '../../../shared/errors/AppError';
+import prisma from '../../../shared/prisma/prisma-client';
 import { Answer } from '.prisma/client';
 
 class GetAnswerForQuestionService {

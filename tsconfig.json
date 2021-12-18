@@ -27,17 +27,6 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "baseUrl": ".",
-    "paths": {
-      "@config/*": [
-        "src/config/*"
-      ],
-      "@modules/*": [
-        "src/modules/*"
-      ],
-      "@shared/*": [
-        "src/shared/*"
-      ]
-    }
   },
   "exclude": [
     "node_modules"

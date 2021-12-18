@@ -1,5 +1,5 @@
-import AppError from '@shared/errors/AppError';
 import { Request, Response } from 'express';
+import AppError from '../../../shared/errors/AppError';
 import GetAnswerForQuestionService from '../services/GetAnswerForQuestionService';
 import VerifyAnswerForQuestionService from '../services/VerifyAnswerForQuestionService';
 

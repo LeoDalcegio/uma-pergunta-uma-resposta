@@ -1,6 +1,6 @@
-import questionsRouter from '@modules/questions/routes/questions.routes';
-import answersRouter from '@modules/answers/routes/answers.routes';
 import { Router } from 'express';
+import questionsRouter from '../../../modules/questions/routes/questions.routes';
+import answersRouter from '../../../modules/answers/routes/answers.routes';
 
 const routes = Router();
 

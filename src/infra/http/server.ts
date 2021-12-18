@@ -4,7 +4,7 @@ import express, { NextFunction, Request, Response } from 'express';
 import 'express-async-errors';
 import cors from 'cors';
 import { errors } from 'celebrate';
-import AppError from '@shared/errors/AppError';
+import AppError from '../../shared/errors/AppError';
 import routes from './routes';
 
 const PORT = process.env.PORT || 3333;
