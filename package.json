@@ -6,6 +6,7 @@
   "author": "Leonardo Luís Dalcegio <leoodalcegio@hotmail.com>",
   "license": "MIT",
   "scripts": {
+    "postinstall": "npx prisma generate",
     "start": "ts-node -r tsconfig-paths/register src/infra/http/server.ts",
     "dev": "ts-node-dev -r tsconfig-paths/register src/infra/http/server.ts",
     "lint": "eslint . --ext .ts",
