@@ -1,6 +1,7 @@
-import { CreateQuestionAnswerDto } from "./CreateQuestionAnswerDto";
+import { CreateQuestionAnswerDto } from './CreateQuestionAnswerDto';
 
 export interface CreateQuestionDto {
   question: string;
-  answer: string | CreateQuestionAnswerDto[];
+  answer?: string;
+  answers?: CreateQuestionAnswerDto[];
 }

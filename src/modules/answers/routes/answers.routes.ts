@@ -8,20 +8,20 @@ const answersController = new AnswersController();
 answersRouter.get(
   '/',
   celebrate({
-    [Segments.PARAMS]: {
+    [Segments.QUERY]: {
       questionId: Joi.number().required(),
     },
   }),
   answersController.getAnswerForQuestion,
 );
 
-answersRouter.get(
+answersRouter.post(
   '/verify',
   celebrate({
     [Segments.BODY]: {
       answer: Joi.string().required(),
     },
-    [Segments.PARAMS]: {
+    [Segments.QUERY]: {
       questionId: Joi.number().required(),
     },
   }),

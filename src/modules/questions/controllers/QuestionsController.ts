@@ -5,11 +5,12 @@ import GetRandomQuestionService from '../services/GetRandomQuestionService';
 
 export default class QuestionsController {
   public async create(request: Request, response: Response): Promise<Response> {
-    const { question, answer } = request.body;
+    const { question, answer, answers } = request.body;
 
     const createQuestionDto: CreateQuestionDto = {
       question,
       answer,
+      answers,
     };
 
     const createQuestionService = new CreateQuestionService();

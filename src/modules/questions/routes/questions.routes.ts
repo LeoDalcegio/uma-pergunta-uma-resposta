@@ -10,7 +10,8 @@ questionsRouter.post(
   celebrate({
     [Segments.BODY]: {
       question: Joi.string().required(),
-      answer: Joi.string().required(),
+      answer: Joi.string().optional(),
+      answers: Joi.array().optional(),
     },
   }),
   questionsController.create,
