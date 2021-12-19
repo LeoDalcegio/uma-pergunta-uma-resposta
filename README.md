@@ -22,7 +22,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 🎯 Funcionalidades
 - Criação de perguna simples (uma pergunta e uma resposta)
-- Criação de pergunta com várias respostas (ver exemplo abaixo)
+- Criação de pergunta com várias respostas
 - Busca de pergunta aleatória
 - Busca de resposta para uma pergunta
 - Verificação de resposta para uma pergunta
