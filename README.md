@@ -7,7 +7,7 @@
 
 Este projeto foi criado para o desafio do DoWhile da Rocketseat, é um cadastro de perguntas e respostas que qualquer pessoa pode usar para responder a perguntas aleatórias ou criar as suas próprias perguntas para que outros respondam.
 
-O objetivo desta api é para que algum frontend faça o consumo dela, criando uma aplicação de perguntas e respostas. Esta API está disponível em [Uma pergunta... uma resposta...](http://localhost:3333/questions/random).
+O objetivo desta api é para que algum frontend faça o consumo dela, criando uma aplicação de perguntas e respostas. Esta API está disponível em [Uma pergunta... uma resposta...](https://uma-pergunta-uma-resposta.herokuapp.com/questions/random).
 
 Como objetivo futuro para a API, seria o desenvolvimento de um ranking de respostas conforme o usuário que respondeu a pergunta, para isso, seria necessário alguma forma simples de cadastro de usuário para o registro de quem respondeu aquela determinada pergunta.
 
@@ -60,22 +60,22 @@ A sua API estára rodando e pode ser acessado em [`http://localhost:3333/`](http
 - Criar pergunta:
 
 ```bash
-curl --header "Content-Type: application/json" -d '{"question": "Qual é a capital do Brasil?", "answer": "Brasília"}' http://localhost:3333/questions
+curl --header "Content-Type: application/json" -d '{"question": "Qual é a capital do Brasil?", "answer": "Brasília"}' https://uma-pergunta-uma-resposta.herokuapp.com/questions
 ```
 
 - Buscar por pergunta aleatória:
 
 ```bash
-curl http://localhost:3333/questions/random
+curl https://uma-pergunta-uma-resposta.herokuapp.com/questions/random
 ```
 - Buscar por resposta de pergunta:
 
 ```bash
-curl http://localhost:3333/answers?questionId=2
+curl https://uma-pergunta-uma-resposta.herokuapp.com/answers?questionId=2
 ```
 
 - Verificar resposta de uma pergunta:
 
 ```bash
-curl --header "Content-Type: application/json" -d '{"answer": "Brasília"}' http://localhost:3333/answers/verify?questionId=2
+curl --header "Content-Type: application/json" -d '{"answer": "Brasília"}' https://uma-pergunta-uma-resposta.herokuapp.com/answers/verify?questionId=2
 ```
