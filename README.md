@@ -79,3 +79,8 @@ curl https://uma-pergunta-uma-resposta.herokuapp.com/answers?questionId=2
 ```bash
 curl --header "Content-Type: application/json" -d '{"answer": "Brasília"}' https://uma-pergunta-uma-resposta.herokuapp.com/answers/verify?questionId=2
 ```
+## 🔥 Endpoints no Insomnia
+
+Você também pode importar as rotas da aplicação para rodar no Insomnia
+
+[![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=Uma%20pergunta...%20uma%20resposta...&uri=https%3A%2F%2Fraw.githubusercontent.com%2FLeoDalcegio%2Fuma-pergunta-uma-resposta%2Fmain%2FInsomnia_2021-12-19.json)
